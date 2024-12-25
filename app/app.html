@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Harga Produk</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div id="input-page" class="container">
+        <h1>Kalkulator Harga Produk</h1>
+        <div class="form-container">
+            <label for="sku">SKU:</label>
+            <input type="text" id="sku" placeholder="Contoh: PRD001" required>
+
+            <label for="hpp">Harga Pokok Penjualan (HPP):</label>
+            <input type="number" id="hpp" placeholder="Contoh: 45000" required>
+
+            <label for="margin">Margin (%):</label>
+            <input type="number" id="margin" placeholder="Contoh: 20" required>
+
+            <label for="biaya">Biaya Tambahan:</label>
+            <input type="number" id="biaya" placeholder="Contoh: 5000">
+
+            <label for="diskon">Diskon (%):</label>
+            <input type="number" id="diskon" placeholder="Contoh: 10">
+
+            <button id="calculate-btn">Hitung Harga Jual</button>
+        </div>
+    </div>
+
+    <!-- Hasil Kalkulasi -->
+    <div id="result-section" class="result-container">
+        <h2>Hasil Kalkulasi</h2>
+        <table id="result-table">
+            <thead>
+                <tr>
+                    <th>SKU</th>
+                    <th>HPP</th>
+                    <th>Margin</th>
+                    <th>Biaya Tambahan</th>
+                    <th>Harga Jual</th>
+                    <th>Harga Akhir</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <div class="buttons-container">
+            <button id="save-btn" class="action-btn">Simpan</button>
+            <button id="download-btn" class="action-btn">Unduh PDF</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
